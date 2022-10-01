@@ -1,0 +1,22 @@
+
+NOM
+	arbo_ps – Produire une arborescence correspondant au résultat de la commande ps -edf.
+	
+SYNOPSIS
+	arbo_ps.sh [OPTION]... [ -d REPERTOIRE ]
+	
+DESCRIPTION
+	arbo_ps.sh crée une arborescence correspondant au résultat de la commande ps –edf. Les répertoires sont hiérarchisés suivant leur PID et leur PPID. Chaque répertoire contient un fichier contenant le nom du processus auquel le PID correspond.
+	
+	Les options disponibles sont :
+	
+	-d <chemin>
+		Si l’option est absente, la commande crée l’arborescence à partir du répertoire courant.
+		
+	-v, --verbose
+		Afficher les différentes étapes de la commande
+		(Exemple : « Phase 1 : Traitement des arguments »)
+		
+	-n, --pid <entier>
+		Créer l’arborescence depuis le PID indiqué et non depuis 0.
+		
